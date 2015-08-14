@@ -14,7 +14,14 @@
 <p>RegexUtils:正则表达式工具类，验证数据是否符合规范</p>
 <p>StringUtils:字符串工具类，对字符串进行常规的处理</p>
 <p>ValidateHelper: 判断对象、字符串、集合是否为空、不为空</p>
-<p></p>
-<p></p>
-
+<h3></h3>
+<h3>package:clone<h3>
+<p>CloneUtils:克隆工具类，进行深克隆,包括对象、集合</p>
+<h3></h3>
+<h3>package:encrypt</h3>
+<p>MD5Utils:md5加密处理工具类</p>
+<h3></h3>
+<h3>package:excel</h3>
+<p>ExcelExportHelper:Excel 生成通用类，为了兼容，所有 Excel 统一生成 Excel2003 即：xx.xls</p>
+<p>ExcelReadHelper:解析Excel，支持2003、2007</p>
 

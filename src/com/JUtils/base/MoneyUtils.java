@@ -26,7 +26,7 @@ public class MoneyUtils {
 	 /**
 	  * 特殊字符：整
 	  */
-	 private static final String CN_FULL = "整";
+	 private static final String CN_FULL = "";
 	 
 	 /**
 	  * 特殊字符：负
@@ -35,7 +35,7 @@ public class MoneyUtils {
 	 /**
 	  * 零元整
 	  */
-	 private static final String CN_ZEOR_FULL = "零元" + CN_FULL;
+	 private static final String CN_ZEOR_FULL = "零元整";
 	 
 	 /**
 	  * 金额的精度，默认值为2
@@ -44,11 +44,11 @@ public class MoneyUtils {
 	 
 	 /**
 	  * 人民币转换为大写,格式为：x万x千x百x十x元x角x分
+	  * 
 	  * @autor:chenssy
 	  * @data:2014年8月7日
 	  *
-	  * @param numberOfMoney
-	  * 				传入的金额
+	  * @param numberOfMoney 传入的金额
 	  * @return
 	  */
 	 public static String number2CNMontray(String numberOfMoney) {

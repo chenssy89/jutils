@@ -6,7 +6,7 @@ import java.math.BigDecimal;
  * 提供精确的加减乘除运算
  * @Project:JUtils
  * @file:BigDecimalUtils.java
- * @Authro:chenming
+ * @Authro:chenssy
  * @data:2014年9月15日
  */
 public class BigDecimalUtils {
@@ -24,7 +24,7 @@ public class BigDecimalUtils {
 	/**
 	 * 
 	 * 加法运算
-	 * @autor:chenming
+	 * @autor:chenssy
 	 * @data:2014年9月15日
 	 *
 	 * @param v1
@@ -40,7 +40,7 @@ public class BigDecimalUtils {
 	/**
 	 * 除法运算<br>
 	 * 当发生除不尽的情况时，由scale参数指定精度，以后的数字四舍五入。
-	 * @autor:chenming
+	 * @autor:chenssy
 	 * @data:2014年9月15日
 	 *
 	 * @param v1
@@ -75,7 +75,7 @@ public class BigDecimalUtils {
 	 * v1 > v2 return 1<br>
 	 * v1 = v2 return 0<br>
 	 * v1 < v2 return -1
-	 * @autor:chenming
+	 * @autor:chenssy
 	 * @data:2014年9月15日
 	 *
 	 * @param v1
@@ -92,7 +92,7 @@ public class BigDecimalUtils {
 	
 	/**
 	 * 返回较小数
-	 * @autor:chenming
+	 * @autor:chenssy
 	 * @data:2014年9月15日
 	 *
 	 * @param v1
@@ -107,7 +107,7 @@ public class BigDecimalUtils {
 	
 	/**
 	 * 返回较大数
-	 * @autor:chenming
+	 * @autor:chenssy
 	 * @data:2014年9月15日
 	 *
 	 * @param v1

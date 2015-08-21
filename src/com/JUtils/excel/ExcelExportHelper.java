@@ -217,7 +217,7 @@ public class ExcelExportHelper {
 	 * header = ["学号","年龄","性别","班级"]<Br>
 	 * properties = ["id","age","sex","class"],其对应的excelList中javaBean的属性值
 	 * 
-	 * @author chenming 
+	 * @author chenssy 
 	 * @date 2014年6月19日 下午6:24:56
 	 * 
 	 * @param header 

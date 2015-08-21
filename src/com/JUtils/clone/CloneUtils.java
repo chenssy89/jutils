@@ -63,11 +63,13 @@ public class CloneUtils {
 	public static <T> Collection<T> cloneCollection(Collection<T> collection) throws ClassNotFoundException, IOException{
 		ByteArrayOutputStream byteOut = new ByteArrayOutputStream();  
 	    ObjectOutputStream out = new ObjectOutputStream(byteOut);  
-	    out.writeObject(collection);  
+	    out.writeObject(collection);
+	    out.close();
 	  
 	    ByteArrayInputStream byteIn = new ByteArrayInputStream(byteOut.toByteArray());  
 	    ObjectInputStream in = new ObjectInputStream(byteIn);  
 	    Collection<T> dest = (Collection<T>) in.readObject();  
+	    in.close();
 	    
 	    return dest;  
 	}

@@ -253,7 +253,7 @@ public class StringUtils {
 	
 	/**
 	 * 
-	 * @autor:chenming
+	 * @autor:chenssy
 	 * @data:2014年8月10日
 	 *
 	 * @param htmlString

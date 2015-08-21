@@ -13,7 +13,7 @@ public class JSPBeanUtils {
 	
 	/**
 	 * 获取时间戳(格式为：yyyyMMddHH24mmss)
-	 * @autor:chenming
+	 * @autor:chenssy
 	 * @data:2014年8月6日
 	 *
 	 * @return
@@ -24,7 +24,7 @@ public class JSPBeanUtils {
 	
 	/**
 	 * 根据指定格式获取当前时间
-	 * @autor:chenming
+	 * @autor:chenssy
 	 * @data:2014年8月7日
 	 *
 	 * @param format

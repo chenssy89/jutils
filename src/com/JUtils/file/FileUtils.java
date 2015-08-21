@@ -27,11 +27,8 @@ public class FileUtils {
 	 */
 	public static boolean isExist(String filePath,boolean isNew){
 		File file = new File(filePath);
-		if(!file.exists()){    
-			if(isNew){
-				file.mkdirs();    //新建文件路径
-			}
-			return true;
+		if(!file.exists() && isNew){    
+			return file.mkdirs();    //新建文件路径
 		}
 		return false;
 	}

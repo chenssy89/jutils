@@ -777,7 +777,7 @@ public class DateUtils {
      * 若date1 > date2 则返回 1<br>
      * 若date1 = date2 则返回 0<br>
      * 若date1 < date2 则返回-1
-     * @autor:chenming
+     * @autor:chenssy
      * @data:2014年9月9日
      *
      * @param date1  
@@ -806,7 +806,7 @@ public class DateUtils {
     /**
      * 将String 转换为 timestamp<br>
      * 注：value必须形如： yyyy-mm-dd hh:mm:ss[.f...] 这样的格式，中括号表示可选，否则报错！！！ 
-     * @autor:chenming
+     * @autor:chenssy
      * @data:2014年9月22日
      *
      * @param value
@@ -822,7 +822,7 @@ public class DateUtils {
     
     /**
      * 将timeStamp 转换为String类型，format为null则使用默认格式 yyyy-MM-dd HH:mm:ss
-     * @autor:chenming
+     * @autor:chenssy
      * @data:2014年9月22日
      *
      * @param value

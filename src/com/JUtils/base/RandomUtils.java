@@ -6,7 +6,7 @@ import java.util.Random;
  * 随机数工具类
  * @Project:JUtils
  * @file:RandomUtils.java
- * @Authro:chenming
+ * @Authro:chenssy
  * @data:2014年8月11日
  */
 public class RandomUtils {
@@ -16,7 +16,7 @@ public class RandomUtils {
     
     /**
      * 获取定长的随机数，包含大小写、数字
-     * @autor:chenming
+     * @autor:chenssy
      * @data:2014年8月11日
      *
      * @param length
@@ -34,7 +34,7 @@ public class RandomUtils {
     
     /**
      * 获取定长的随机数，包含大小写字母
-     * @autor:chenming
+     * @autor:chenssy
      * @data:2014年8月11日
      *
      * @param length
@@ -52,7 +52,7 @@ public class RandomUtils {
     
     /**
      * 获取定长的随机数，只包含小写字母
-     * @autor:chenming
+     * @autor:chenssy
      * @data:2014年8月11日
      *
      * @param length	
@@ -65,7 +65,7 @@ public class RandomUtils {
     
     /**
      * 获取定长的随机数，只包含大写字母
-     * @autor:chenming
+     * @autor:chenssy
      * @data:2014年8月11日
      *
      * @param length
@@ -78,7 +78,7 @@ public class RandomUtils {
     
     /**
      * 获取定长的随机数，只包含数字
-     * @autor:chenming
+     * @autor:chenssy
      * @data:2014年8月11日
      *
      * @param length

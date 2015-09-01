@@ -27,8 +27,8 @@ public class BigDecimalUtils {
 	 * @autor:chenssy
 	 * @data:2014年9月15日
 	 *
-	 * @param v1
-	 * @param v2
+	 * @param v1	加数
+	 * @param v2	被加数
 	 * @return
 	 */
 	public static String add(String v1,String v2){    
@@ -51,24 +51,24 @@ public class BigDecimalUtils {
 	 * 			精确精度
 	 * @return
 	 */
-	 public static String div(String v1,String v2,int scale,int round){    
-	        if(scale<0){    
-	            throw new IllegalArgumentException(    
-	                "The scale must be a positive integer or zero");    
-	        }    
-	        
-	        if(ValidateHelper.isEmpty(scale)){
-	        	scale = DEFAULT_SCALE;
-	        }
-	        
-	        if(ValidateHelper.isEmpty(round)){
-	        	round = DEFAULT_ROUND;
-	        }
-	        
-	        BigDecimal b1 = new BigDecimal(v1);    
-	        BigDecimal b2 = new BigDecimal(v2);    
-	        return b1.divide(b2,scale,BigDecimal.ROUND_HALF_UP).toString();    
-	    }   
+	public static String div(String v1, String v2, int scale, int round) {
+		if (scale < 0) {
+			throw new IllegalArgumentException(
+					"The scale must be a positive integer or zero");
+		}
+
+		if (ValidateHelper.isEmpty(scale)) {
+			scale = DEFAULT_SCALE;
+		}
+
+		if (ValidateHelper.isEmpty(round)) {
+			round = DEFAULT_ROUND;
+		}
+
+		BigDecimal b1 = new BigDecimal(v1);
+		BigDecimal b2 = new BigDecimal(v2);
+		return b1.divide(b2, scale, BigDecimal.ROUND_HALF_UP).toString();
+	}
 	
 	/**
 	 * 比较两个数<br>
@@ -119,4 +119,104 @@ public class BigDecimalUtils {
         BigDecimal b2 = new BigDecimal(v2);    
         return b1.max(b2).toString();    
     }   
+	
+	/**
+	 * 处理BigDecimal数据，保留scale位小数
+	 * @author:chenssy
+	 * @data:2014年10月21日
+	 *
+	 * @param value
+	 * @param scale
+	 * @return
+	 */
+	public static BigDecimal getValue(BigDecimal value,int scale){
+		if(!ValidateHelper.isEmpty(value)){
+			return value.setScale(scale, BigDecimal.ROUND_HALF_UP);
+		}
+		return value;
+	}
+	
+	/**
+	 * 将object转换为Bigdecimal
+	 * 
+	 * @author:chenssy
+	 * @data:2014年10月17日
+	 *
+	 * @param value
+	 * 				待转换的数值
+	 * @return
+	 */
+	public static BigDecimal getBigDecimal(Object value){
+		BigDecimal resultValue = new BigDecimal(0);
+		if(value instanceof String){
+			resultValue =  new BigDecimal((String)value);
+		}
+		else if(value instanceof Integer){
+			resultValue =  new BigDecimal((Integer)value);
+		}
+		else if(value instanceof Double){
+			resultValue =  new BigDecimal((Integer)value);
+		}
+		else if(value instanceof Long){
+			resultValue =  new BigDecimal((Long)value);
+		}
+		else if(value instanceof Double){
+			resultValue =  new BigDecimal((Integer)value);
+		}
+		else{
+			resultValue = (BigDecimal) value;
+		}
+		
+		return resultValue;
+	}
+	
+	
+	/**
+	 * 将object转换为Bigdecimal,若object为空，则返回resultValue
+	 * 
+	 * @autor:chenssy
+	 * @data:2014年9月20日
+	 *
+	 * @param value
+	 * @return
+	 */
+	public static BigDecimal getBigDecimal(Object value,BigDecimal resultValue){
+		if(ValidateHelper.isEmpty(value)){
+			return resultValue;
+		}
+		
+		resultValue = getBigDecimal(resultValue);
+		
+		return resultValue;
+	}
+	
+	/**
+	 * 将BigDecimal 转换成Long
+	 * @autor:chenssy
+	 * @data:2014年9月20日
+	 *
+	 * @param value
+	 * @return
+	 */
+	public static Long setBigDecimalToLong(BigDecimal value){
+		if(value != null){
+			return new Long(value.longValue());
+		}
+		return null;
+	}
+	
+	/**
+	 * 将BigDecimal 转换成integer
+	 * @autor:huangc
+	 * @data:2014年9月20日
+	 *
+	 * @param value
+	 * @return
+	 */
+	public static Integer setBigDecimalToInteger(BigDecimal value){
+		if(value != null){
+			return new Integer(value.intValue());
+		}
+		return null;
+	}
 }

@@ -706,7 +706,12 @@ public class DateUtils {
         startDay = formatDate(startDay, "yyyy-MM-dd");
         endDay = formatDate(endDay, "yyyy-MM-dd");
         
-        String formatStyle = stype==1?"yyyy-MM":"yyyy-MM-dd";     
+        String formatStyle = "yyyy-MM-dd";
+        if("1".equals(stype)){
+        	formatStyle = "yyyy-MM";
+        }else if("2".equals(stype)){
+        	formatStyle = "yyyy";
+        }   
              
         endDay = endDay==null ? getCurrentTime("yyyy-MM-dd") : endDay;     
              

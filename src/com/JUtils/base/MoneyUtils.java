@@ -7,7 +7,7 @@ import java.math.RoundingMode;
  * 金钱处理工具类
  * @Project:JUtils
  * @file:MoneyUtils.java
- * @Authro:chenssy
+ * @Author:chenssy
  * @data:2014年8月7日
  */
 public class MoneyUtils {

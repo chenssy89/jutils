@@ -6,7 +6,7 @@ import java.util.Random;
  * 随机数工具类
  * @Project:JUtils
  * @file:RandomUtils.java
- * @Authro:chenssy
+ * @Author:chenssy
  * @data:2014年8月11日
  */
 public class RandomUtils {

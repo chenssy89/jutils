@@ -1,6 +1,7 @@
 package com.JUtils.file;
 
 import java.io.File;
+import java.io.FileInputStream;
 
 import com.JUtils.base.DateUtils;
 import com.JUtils.base.RandomUtils;
@@ -9,7 +10,7 @@ import com.JUtils.base.RandomUtils;
  * @desc:文件工具类
  * @Project:JUtils
  * @file:FileUtils.java
- * @Authro:chenssy
+ * @Author:chenssy
  * @data:2014年8月7日
  */
 public class FileUtils {
@@ -82,4 +83,26 @@ public class FileUtils {
 		return date + random;
 	}
 	
+	/**
+	 * 获取指定文件的大小
+	 *
+	 * @param file
+	 * @return
+	 * @throws Exception
+	 *
+	 * @author:陈明
+	 * @data : 2016年4月30日 下午9:10:12
+	 */
+	@SuppressWarnings("resource")
+	public static long getFileSize(File file) throws Exception {
+		long size = 0;
+		if (file.exists()) {
+			FileInputStream fis = null;
+			fis = new FileInputStream(file);
+			size = fis.available();
+		} else {
+			file.createNewFile();
+		}
+		return size;
+	}
 }

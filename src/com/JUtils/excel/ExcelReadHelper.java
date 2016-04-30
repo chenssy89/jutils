@@ -26,7 +26,7 @@ import com.JUtils.base.DateUtils;
  * 解析Excel，支持2003、2007
  * @Project:JUtils
  * @file:ExcelReadHelper.java
- * @Authro:chenssy
+ * @Author:chenssy
  * @data:2014年8月3日
  */
 public class ExcelReadHelper {

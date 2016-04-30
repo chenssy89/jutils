@@ -6,7 +6,7 @@ import java.math.BigDecimal;
  * 提供精确的加减乘除运算
  * @Project:JUtils
  * @file:BigDecimalUtils.java
- * @Authro:chenssy
+ * @Author:chenssy
  * @data:2014年9月15日
  */
 public class BigDecimalUtils {

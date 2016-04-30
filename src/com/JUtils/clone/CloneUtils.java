@@ -12,7 +12,7 @@ import java.util.Collection;
  * 克隆工具类，进行深克隆,包括对象、集合
  * @Project:JUtils
  * @file:CloneUtils.java
- * @Authro:chenssy
+ * @Author:chenssy
  * @data:2014年8月9日
  */
 public class CloneUtils {

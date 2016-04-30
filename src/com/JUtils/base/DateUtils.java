@@ -38,16 +38,16 @@ public class DateUtils {
 	public static final String DATE_FORMAT1 = "yyyy-MM-dd";
 		
 	/** yyyy-MM-dd hh:mm:ss */
-	public static final String DATE_FORMAT2 = "yyyy-MM-dd HH24:mm:ss";
+	public static final String DATE_FORMAT2 = "yyyy-MM-dd HH:mm:ss";
 
 	/** yyyy-MM-dd hh:mm:ss|SSS */
-	public static final String TIME_FORMAT_SSS = "yyyy-MM-dd HH24:mm:ss|SSS";
+	public static final String TIME_FORMAT_SSS = "yyyy-MM-dd HH:mm:ss|SSS";
 	
 	/** yyyyMMdd */
 	public static final String DATE_NOFUll_FORMAT = "yyyyMMdd";
 	
 	/** yyyyMMddhhmmss */
-	public static final String TIME_NOFUll_FORMAT = "yyyyMMddHH24mmss";
+	public static final String TIME_NOFUll_FORMAT = "yyyyMMddHHmmss";
 	
 	public static final String[] weeks = {"星期日","星期一","星期二","星期三","星期四","星期五","星期六"};
 	
@@ -510,7 +510,7 @@ public class DateUtils {
 	}
 	
 	/**
-	 * @desc:格式化是时间，采用默认格式（yyyy-MM-dd HH24:mm:ss）
+	 * @desc:格式化是时间，采用默认格式（yyyy-MM-dd HH:mm:ss）
 	 * @autor:chenssy
 	 * @data:2014年8月6日
 	 *

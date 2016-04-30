@@ -9,7 +9,7 @@ import java.util.Set;
  * 铭感词过滤工具类
  * @Project:JUtils
  * @file:SensitivewordFilter.java
- * @Authro:chenssy
+ * @Author:chenssy
  * @data:2014年8月5日
  */
 public class SensitivewordFilterUtil{

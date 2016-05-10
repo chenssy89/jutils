@@ -77,7 +77,7 @@ public class StringUtils {
 	 * 				返回的默认值
 	 * @return
 	 */
-	public String toString(Object object,String nullStr){
+	public static String toString(Object object,String nullStr){
 		return object == null ? nullStr : object.toString();
 	}
 	

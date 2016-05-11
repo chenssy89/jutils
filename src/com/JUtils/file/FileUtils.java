@@ -105,4 +105,25 @@ public class FileUtils {
 		}
 		return size;
 	}
+	
+    public void deleteAll(String dirpath) {  
+    	 File path = new File(dirpath);  
+         try {  
+             if (!path.exists())  
+                 return;// 目录不存在退出   
+             if (path.isFile()) // 如果是文件删除   
+             {  
+                 path.delete();  
+                 return;  
+             }  
+             File[] files = path.listFiles();// 如果目录中有文件递归删除文件   
+             for (int i = 0; i < files.length; i++) {  
+                 deleteAll(files[i].getAbsolutePath());  
+             }  
+             path.delete();  
+
+         } catch (Exception e) {  
+             e.printStackTrace();  
+         }   
+    }  
 }

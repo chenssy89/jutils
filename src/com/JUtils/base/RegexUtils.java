@@ -4,17 +4,16 @@ import java.util.regex.Pattern;
 
 /**
  * 正则表达式工具类，验证数据是否符合规范
- * @Project:JUtils
- * @file:RegularUtils.java
+ * 
  * @Author:chenssy
- * @data:2014年8月7日
+ * @date:2014年8月7日
  */
 public class RegexUtils {
 	
 	/**
 	 * 判断输入的字符串是否符合Email格式.
 	 * @autor:chenssy
-	 * @data:2014年8月7日
+	 * @date:2014年8月7日
 	 *
 	 * @param email
 	 * 				传入的字符串
@@ -31,7 +30,7 @@ public class RegexUtils {
 	/**
 	 * 判断输入的字符串是否为纯汉字
 	 * @autor:chenssy
-	 * @data:2014年8月7日
+	 * @date:2014年8月7日
 	 *
 	 * @param value
 	 * 				传入的字符串
@@ -45,7 +44,7 @@ public class RegexUtils {
 	/**
 	 * 判断是否为浮点数，包括double和float
 	 * @autor:chenssy
-	 * @data:2014年8月7日
+	 * @date:2014年8月7日
 	 *
 	 * @param value
 	 * 			传入的字符串
@@ -59,7 +58,7 @@ public class RegexUtils {
 	/**
 	 * 判断是否为整数
 	 * @autor:chenssy
-	 * @data:2014年8月7日
+	 * @date:2014年8月7日
 	 *
 	 * @param value
 	 * 			传入的字符串

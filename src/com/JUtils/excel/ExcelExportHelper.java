@@ -32,8 +32,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.HSSFColor;
 
 /**
- * @Description: Excel 生成通用类，为了兼容，所有 Excel 统一生成 Excel2003 即：xx.xls
- * @Project：javaUtils
+ * Excel 生成通用类，为了兼容，所有 Excel 统一生成 Excel2003 即：xx.xls
  * @Author : chenssy
  * @Date ： 2014年6月15日 下午9:09:38
  */

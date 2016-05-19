@@ -7,17 +7,16 @@ import java.util.Map;
 
 /**
  * 判断对象、字符串、集合是否为空、不为空
- * @Project:JUtils
- * @file:ValidateHelper.java
+ * 
  * @Author:chenssy
- * @data:2014年8月4日
+ * @date:2014年8月4日
  */
 public final class ValidateHelper {
 	
 	/**
 	 *  判断数组是否为空
 	 * @author chenssy
-	 * @data Dec 23, 2013
+	 * @date Dec 23, 2013
 	 * @param array
 	 * @return boolean
 	 */
@@ -34,7 +33,7 @@ public final class ValidateHelper {
 	/**
 	 *  判断数组是否不为空
 	 * @author chenssy
-	 * @data Dec 23, 2013
+	 * @date Dec 23, 2013
 	 * @param array
 	 * @return boolean
 	 */
@@ -50,7 +49,7 @@ public final class ValidateHelper {
 	/**
 	 *  判断字符串是否为空
 	 * @author chenssy
-	 * @data Dec 23, 2013
+	 * @date Dec 23, 2013
 	 * @param string
 	 * @return boolean
 	 */
@@ -66,7 +65,7 @@ public final class ValidateHelper {
 	/**
 	 *  判断字符串是否不为空
 	 * @author chenssy
-	 * @data Dec 23, 2013
+	 * @date Dec 23, 2013
 	 * @param string
 	 * @return boolean
 	 */
@@ -82,7 +81,7 @@ public final class ValidateHelper {
 	/**
 	 *  判断集合是否为空
 	 * @author chenssy
-	 * @data Dec 26, 2013
+	 * @date Dec 26, 2013
 	 * @param collection
 	 * @return boolean
 	 */
@@ -98,7 +97,7 @@ public final class ValidateHelper {
 	/**
 	 *  判断集合是否不为空
 	 * @author chenssy
-	 * @data Dec 26, 2013
+	 * @date Dec 26, 2013
 	 * @param collection
 	 * @return boolean
 	 */
@@ -114,7 +113,7 @@ public final class ValidateHelper {
 	/**
 	 *  判断map集合是否不为空
 	 * @author chenssy
-	 * @data Dec 26, 2013
+	 * @date Dec 26, 2013
 	 * @param map
 	 * @return boolean
 	 */
@@ -131,7 +130,7 @@ public final class ValidateHelper {
 	/**
 	 *  判断map集合是否为空
 	 * @author ming.chen
-	 * @data Dec 26, 2013
+	 * @date Dec 26, 2013
 	 * @param map
 	 * @return boolean
 	 */

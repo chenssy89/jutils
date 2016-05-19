@@ -6,17 +6,16 @@ import java.util.regex.Pattern;
 /**
  * 
  * 字符串工具类，对字符串进行常规的处理
- * @Project:JUtils
- * @file:StringUtil.java
+ * 
  * @Author:chenssy
- * @data:2014年8月5日
+ * @date:2014年8月5日
  */
 public class StringUtils {
 	
 	/**
 	 * 将半角的符号转换成全角符号.(即英文字符转中文字符)
 	 * @autor:chenssy
-	 * @data:2014年8月7日
+	 * @date:2014年8月7日
 	 *
 	 * @param str
 	 * 			要转换的字符
@@ -49,7 +48,7 @@ public class StringUtils {
 	 * 		  unicodeEscaped(' ') = "\u0020"<br>
 	 * 		  unicodeEscaped('A') = "\u0041"
 	 * @autor:chenssy
-	 * @data:2014年8月7日
+	 * @date:2014年8月7日
 	 *
 	 * @param ch
 	 * 			待转换的char 字符
@@ -69,7 +68,7 @@ public class StringUtils {
 	/**
 	 * 进行toString操作，若为空，返回默认值
 	 * @autor:chenssy
-	 * @data:2014年8月9日
+	 * @date:2014年8月9日
 	 *
 	 * @param object
 	 * 				要进行toString操作的对象
@@ -86,7 +85,7 @@ public class StringUtils {
 	 * 		 当value == null || value == "" return value;<br>
 	 * 		 当count <= 1 返回  value
 	 * @autor:chenssy
-	 * @data:2014年8月9日
+	 * @date:2014年8月9日
 	 *
 	 * @param value
 	 * 				需要循环的字符串
@@ -130,7 +129,7 @@ public class StringUtils {
 	/**
 	 * 将某个字符重复N次
 	 * @autor:chenssy
-	 * @data:2014年8月9日
+	 * @date:2014年8月9日
 	 *
 	 * @param ch
 	 * 			需要循环的字符
@@ -149,7 +148,7 @@ public class StringUtils {
 	/**
 	 * 判断字符串是否全部都为小写
 	 * @autor:chenssy
-	 * @data:2014年8月9日
+	 * @date:2014年8月9日
 	 *
 	 * @param value
 	 * 				待判断的字符串
@@ -170,7 +169,7 @@ public class StringUtils {
 	/**
 	 * 判断字符串是否全部大写
 	 * @autor:chenssy
-	 * @data:2014年8月9日
+	 * @date:2014年8月9日
 	 *
 	 * @param value
 	 * 				待判断的字符串
@@ -191,7 +190,7 @@ public class StringUtils {
 	/**
 	 * 反转字符串
 	 * @autor:chenssy
-	 * @data:2014年8月9日
+	 * @date:2014年8月9日
 	 *
 	 * @param value
 	 * 				待反转的字符串
@@ -207,7 +206,7 @@ public class StringUtils {
 	/**
 	 * @desc:截取字符串，支持中英文混乱，其中中文当做两位处理
 	 * @autor:chenssy
-	 * @data:2014年8月10日
+	 * @date:2014年8月10日
 	 *
 	 * @param resourceString
 	 * @param length
@@ -254,7 +253,7 @@ public class StringUtils {
 	/**
 	 * 
 	 * @autor:chenssy
-	 * @data:2014年8月10日
+	 * @date:2014年8月10日
 	 *
 	 * @param htmlString
 	 * @param length
@@ -267,7 +266,7 @@ public class StringUtils {
 	/**
 	 * 过滤html标签，包括script、style、html、空格、回车标签
 	 * @autor:chenssy
-	 * @data:2014年8月10日
+	 * @date:2014年8月10日
 	 *
 	 * @param htmlStr
 	 * @return

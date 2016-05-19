@@ -10,17 +10,16 @@ import java.util.Collection;
 
 /**
  * 克隆工具类，进行深克隆,包括对象、集合
- * @Project:JUtils
- * @file:CloneUtils.java
+ * 
  * @Author:chenssy
- * @data:2014年8月9日
+ * @date:2014年8月9日
  */
 public class CloneUtils {
 
 	/**
 	 * 采用对象的序列化完成对象的深克隆
 	 * @autor:chenssy
-	 * @data:2014年8月9日
+	 * @date:2014年8月9日
 	 *
 	 * @param obj
 	 * 			待克隆的对象
@@ -51,7 +50,7 @@ public class CloneUtils {
 	/**
 	 * 利用序列化完成集合的深克隆
 	 * @autor:chenssy
-	 * @data:2014年8月9日
+	 * @date:2014年8月9日
 	 *
 	 * @param collection
 	 * 					待克隆的集合

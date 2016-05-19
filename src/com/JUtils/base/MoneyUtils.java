@@ -5,10 +5,9 @@ import java.math.RoundingMode;
 
 /**
  * 金钱处理工具类
- * @Project:JUtils
- * @file:MoneyUtils.java
+ * 
  * @Author:chenssy
- * @data:2014年8月7日
+ * @date:2014年8月7日
  */
 public class MoneyUtils {
 	
@@ -46,7 +45,7 @@ public class MoneyUtils {
 	  * 人民币转换为大写,格式为：x万x千x百x十x元x角x分
 	  * 
 	  * @autor:chenssy
-	  * @data:2014年8月7日
+	  * @date:2014年8月7日
 	  *
 	  * @param numberOfMoney 传入的金额
 	  * @return
@@ -59,7 +58,7 @@ public class MoneyUtils {
 	/**
 	 * 人民币转换为大写,格式为：x万x千x百x十x元x角x分
 	 * @autor:chenssy
-	 * @data:2014年8月7日
+	 * @date:2014年8月7日
 	 *
 	 * @param numberOfMoney
 	 * 					传入的金额
@@ -140,7 +139,7 @@ public class MoneyUtils {
 	/**
 	 * 将人民币转换为会计格式金额(xxxx,xxxx,xxxx.xx),保留两位小数
 	 * @autor:chenssy
-	 * @data:2014年8月7日
+	 * @date:2014年8月7日
 	 *
 	 * @param money
 	 * 				待转换的金额
@@ -153,7 +152,7 @@ public class MoneyUtils {
 	/**
 	 * 格式化金额，显示为xxx万元，xxx百万,xxx亿
 	 * @autor:chenssy
-	 * @data:2014年8月7日
+	 * @date:2014年8月7日
 	 *
 	 * @param money 
 	 * 				待处理的金额
@@ -170,7 +169,7 @@ public class MoneyUtils {
 	/**
 	 * 获取会计格式的人民币(格式为:xxxx,xxxx,xxxx.xx)
 	 * @autor:chenssy
-	 * @data:2014年8月7日
+	 * @date:2014年8月7日
 	 *
 	 * @param money 
 	 * 				待处理的金额
@@ -187,7 +186,7 @@ public class MoneyUtils {
 	/**
 	 * 将人民币转换为会计格式金额(xxxx,xxxx,xxxx.xx)
 	 * @autor:chenssy
-	 * @data:2014年8月7日
+	 * @date:2014年8月7日
 	 *
 	 * @param money 
 	 * 				待处理的金额
@@ -238,7 +237,7 @@ public class MoneyUtils {
 	/**
 	 * 格式化金额，显示为xxx万元，xxx百万,xxx亿
 	 * @autor:chenssy
-	 * @data:2014年8月7日
+	 * @date:2014年8月7日
 	 *
 	 * @param money 
 	 * 				待处理的金额

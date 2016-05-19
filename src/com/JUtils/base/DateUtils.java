@@ -10,10 +10,9 @@ import java.util.Date;
 
 /**
  * @desc:时间处理工具类
- * @Project:JUtils
- * @file:DateUtils.java
+ * 
  * @Author:chenssy
- * @data:2014年8月4日
+ * @date:2014年8月4日
  */
 public class DateUtils {
 	/** yyyy:年 */
@@ -54,7 +53,7 @@ public class DateUtils {
 	/**
 	 * 根据指定格式获取当前时间
 	 * @author chenssy
-	 * @data Dec 27, 2013
+	 * @date Dec 27, 2013
 	 * @param format
 	 * @return String
 	 */
@@ -67,7 +66,7 @@ public class DateUtils {
 	/**
 	 * 获取当前时间，格式为：yyyy-MM-dd HH:mm:ss
 	 * @author chenssy
-	 * @data Dec 27, 2013
+	 * @date Dec 27, 2013
 	 * @return String
 	 */
 	public static String getCurrentTime(){
@@ -77,7 +76,7 @@ public class DateUtils {
 	/**
 	 * 获取指定格式的当前时间：为空时格式为yyyy-mm-dd HH:mm:ss
 	 * @author chenssy
-	 * @data Dec 30, 2013
+	 * @date Dec 30, 2013
 	 * @param format
 	 * @return Date
 	 * @throws Exception 
@@ -97,7 +96,7 @@ public class DateUtils {
 	/**
 	 * 获取当前时间，格式为yyyy-MM-dd HH:mm:ss
 	 * @author chenssy
-	 * @data Dec 30, 2013
+	 * @date Dec 30, 2013
 	 * @return Date
 	 * @throws Exception 
 	 */
@@ -111,7 +110,7 @@ public class DateUtils {
 	 * yyyy-MM-dd hh:mm:ss 和 yyyyMMddhhmmss 相互转换<br>
 	 * yyyy-mm-dd 和yyyymmss 相互转换
 	 * @author chenssy
-	 * @data Dec 26, 2013
+	 * @date Dec 26, 2013
 	 * @param value 
 	 * 				日期
 	 * @return String
@@ -142,7 +141,7 @@ public class DateUtils {
 	/**
 	 * 给指定日期加入年份，为空时默认当前时间
 	 * @author chenssy
-	 * @data Dec 30, 2013
+	 * @date Dec 30, 2013
 	 * @param year 年份  正数相加、负数相减
 	 * @param date 为空时，默认为当前时间
 	 * @param format 默认格式为：yyyy-MM-dd HH:mm:ss
@@ -161,7 +160,7 @@ public class DateUtils {
 	/**
 	 * 给指定日期加入年份，为空时默认当前时间
 	 * @author chenssy
-	 * @data Dec 30, 2013
+	 * @date Dec 30, 2013
 	 * @param year 年份  正数相加、负数相减
 	 * @param date 为空时，默认为当前时间
 	 * @param format 默认格式为：yyyy-MM-dd HH:mm:ss
@@ -180,7 +179,7 @@ public class DateUtils {
 	/**
 	 * 给指定日期增加月份 为空时默认当前时间
 	 * @author chenssy
-	 * @data Dec 30, 2013
+	 * @date Dec 30, 2013
 	 * @param month  增加月份  正数相加、负数相减
 	 * @param date 指定时间
 	 * @param format 指定格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -199,7 +198,7 @@ public class DateUtils {
 	/**
 	 * 给指定日期增加月份 为空时默认当前时间
 	 * @author chenssy
-	 * @data Dec 30, 2013
+	 * @date Dec 30, 2013
 	 * @param month  增加月份  正数相加、负数相减
 	 * @param date 指定时间
 	 * @param format 指定格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -218,7 +217,7 @@ public class DateUtils {
 	/**
 	 * 给指定日期增加天数，为空时默认当前时间
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param day 增加天数 正数相加、负数相减
 	 * @param date 指定日期
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -237,7 +236,7 @@ public class DateUtils {
 	/**
 	 * 给指定日期增加天数，为空时默认当前时间
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param day 增加天数 正数相加、负数相减
 	 * @param date 指定日期
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -256,7 +255,7 @@ public class DateUtils {
 	/**
 	 * 给指定日期增加小时，为空时默认当前时间
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param hour 增加小时  正数相加、负数相减
 	 * @param date 指定日期
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -275,7 +274,7 @@ public class DateUtils {
 	/**
 	 * 给指定日期增加小时，为空时默认当前时间
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param hour 增加小时  正数相加、负数相减
 	 * @param date 指定日期
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -294,7 +293,7 @@ public class DateUtils {
 	/**
 	 * 给指定的日期增加分钟，为空时默认当前时间
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param minute 增加分钟  正数相加、负数相减
 	 * @param date 指定日期 
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -313,7 +312,7 @@ public class DateUtils {
 	/**
 	 * 给指定的日期增加分钟，为空时默认当前时间
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param minute 增加分钟  正数相加、负数相减
 	 * @param date 指定日期 
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -332,7 +331,7 @@ public class DateUtils {
 	/**
 	 * 给指定日期增加秒，为空时默认当前时间
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param second 增加秒 正数相加、负数相减
 	 * @param date 指定日期
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -351,7 +350,7 @@ public class DateUtils {
 	/**
 	 * 给指定日期增加秒，为空时默认当前时间
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param second 增加秒 正数相加、负数相减
 	 * @param date 指定日期
 	 * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
@@ -370,7 +369,7 @@ public class DateUtils {
 	/**
 	 * 获取指定格式指定时间的日历
 	 * @author chenssy
-	 * @data Dec 30, 2013
+	 * @date Dec 30, 2013
 	 * @param date 时间 
 	 * @param format 格式
 	 * @return Calendar
@@ -390,7 +389,7 @@ public class DateUtils {
 	/**
 	 * 获取日期显示格式，为空默认为yyyy-mm-dd HH:mm:ss
 	 * @author chenssy
-	 * @data Dec 30, 2013
+	 * @date Dec 30, 2013
 	 * @param format
 	 * @return
 	 * @return SimpleDateFormat
@@ -405,7 +404,7 @@ public class DateUtils {
 	/**
 	 * 将字符串(格式符合规范)转换成Date
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 需要转换的字符串
 	 * @param format 日期格式 
 	 * @return Date
@@ -430,7 +429,7 @@ public class DateUtils {
 	/**
 	 * 将日期格式转换成String
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 需要转换的日期
 	 * @param format 日期格式
 	 * @return String
@@ -447,7 +446,7 @@ public class DateUtils {
 	/**
 	 * @desc:格式化时间
 	 * @autor:chenssy
-	 * @data:2014年8月6日
+	 * @date:2014年8月6日
 	 *
 	 * @param value 时间
 	 * @param format 指定格式
@@ -512,7 +511,7 @@ public class DateUtils {
 	/**
 	 * @desc:格式化是时间，采用默认格式（yyyy-MM-dd HH:mm:ss）
 	 * @autor:chenssy
-	 * @data:2014年8月6日
+	 * @date:2014年8月6日
 	 *
 	 * @param value
 	 * @return
@@ -526,7 +525,7 @@ public class DateUtils {
 	/**
 	 * 获取指定日期的年份
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 */
@@ -538,7 +537,7 @@ public class DateUtils {
 	/**
 	 * 获取指定日期的年份
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 * @throws Exception 
@@ -552,7 +551,7 @@ public class DateUtils {
 	/**
 	 * 获取指定日期的月份
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 */
@@ -564,7 +563,7 @@ public class DateUtils {
 	/**
 	 * 获取指定日期的月份
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 * @throws Exception 
@@ -579,7 +578,7 @@ public class DateUtils {
 	/**
 	 * 获取指定日期的天份
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 */
@@ -591,7 +590,7 @@ public class DateUtils {
 	/**
 	 * 获取指定日期的天份
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 * @throws Exception 
@@ -606,7 +605,7 @@ public class DateUtils {
 	/**
 	 * 获取当前日期为星期几
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return String
 	 * @throws Exception 
@@ -621,7 +620,7 @@ public class DateUtils {
 	/**
 	 * 获取当前日期为星期几
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return String
 	 * @throws Exception 
@@ -634,7 +633,7 @@ public class DateUtils {
 	/**
 	 * 获取指定日期的小时
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 */
@@ -646,7 +645,7 @@ public class DateUtils {
 	/**
 	 * 获取指定日期的小时
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return
 	 * @return int
@@ -662,7 +661,7 @@ public class DateUtils {
 	/**
 	 * 获取指定日期的分钟
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 */
@@ -674,7 +673,7 @@ public class DateUtils {
 	/**
 	 * 获取指定日期的分钟
 	 * @author chenssy
-	 * @data Dec 31, 2013
+	 * @date Dec 31, 2013
 	 * @param value 日期
 	 * @return int
 	 * @throws Exception 
@@ -694,7 +693,7 @@ public class DateUtils {
      * &nbsp;compareDate("2009-09-12", null, 2);//比较年 <br>
      * 
 	 * @author chenssy
-	 * @data Dec 31, 2013 
+	 * @date Dec 31, 2013 
      * @param startDay 需要比较的时间 不能为空(null),需要正确的日期格式 ,如：2009-09-12   
      * @param endDay 被比较的时间  为空(null)则为当前时间    
      * @param stype 返回值类型   0为多少天，1为多少个月，2为多少年    
@@ -707,9 +706,9 @@ public class DateUtils {
         endDay = formatDate(endDay, "yyyy-MM-dd");
         
         String formatStyle = "yyyy-MM-dd";
-        if("1".equals(stype)){
+        if(1 == stype){
         	formatStyle = "yyyy-MM";
-        }else if("2".equals(stype)){
+        }else if(2 == stype){
         	formatStyle = "yyyy";
         }   
              
@@ -743,7 +742,7 @@ public class DateUtils {
     /**
      * 比较两个时间相差多少小时(分钟、秒)
      * @author chenssy
-     * @data Jan 2, 2014
+     * @date Jan 2, 2014
      * @param startTime 需要比较的时间 不能为空，且必须符合正确格式：2012-12-12 12:12:
      * @param endTime 需要被比较的时间 若为空则默认当前时间
      * @param type 1：小时   2：分钟   3：秒
@@ -783,7 +782,7 @@ public class DateUtils {
      * 若date1 = date2 则返回 0<br>
      * 若date1 < date2 则返回-1
      * @autor:chenssy
-     * @data:2014年9月9日
+     * @date:2014年9月9日
      *
      * @param date1  
      * @param date2
@@ -812,7 +811,7 @@ public class DateUtils {
      * 将String 转换为 timestamp<br>
      * 注：value必须形如： yyyy-mm-dd hh:mm:ss[.f...] 这样的格式，中括号表示可选，否则报错！！！ 
      * @autor:chenssy
-     * @data:2014年9月22日
+     * @date:2014年9月22日
      *
      * @param value
      * @param format
@@ -828,7 +827,7 @@ public class DateUtils {
     /**
      * 将timeStamp 转换为String类型，format为null则使用默认格式 yyyy-MM-dd HH:mm:ss
      * @autor:chenssy
-     * @data:2014年9月22日
+     * @date:2014年9月22日
      *
      * @param value
      * @param format

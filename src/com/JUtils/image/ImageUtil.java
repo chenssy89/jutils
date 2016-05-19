@@ -17,10 +17,9 @@ import javax.imageio.ImageIO;
 /**
  * 图像处理<br>
  * 对图片进行压缩、水印、伸缩变换、透明处理、格式转换操作
- * @Project:JUtils
- * @file:PictureUtil.java
+ * 
  * @Author:chenssy
- * @data:2015年3月19日
+ * @date:2015年3月19日
  */
 public class ImageUtil {
 

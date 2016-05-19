@@ -8,17 +8,16 @@ import com.JUtils.base.RandomUtils;
 
 /**
  * @desc:文件工具类
- * @Project:JUtils
- * @file:FileUtils.java
+ * 
  * @Author:chenssy
- * @data:2014年8月7日
+ * @date:2014年8月7日
  */
 public class FileUtils {
 	
 	/**
 	 * @desc:判断指定路径是否存在，如果不存在，根据参数决定是否新建
 	 * @autor:chenssy
-	 * @data:2014年8月7日
+	 * @date:2014年8月7日
 	 *
 	 * @param filePath
 	 * 			指定的文件路径
@@ -37,7 +36,7 @@ public class FileUtils {
 	/**
 	 * 获取文件名，构建结构为 prefix + yyyyMMddHH24mmss + 10位随机数 + suffix + .type
 	 * @autor:chenssy
-	 * @data:2014年8月11日
+	 * @date:2014年8月11日
 	 *
 	 * @param type
 	 * 				文件类型
@@ -58,7 +57,7 @@ public class FileUtils {
 	/**
 	 * 获取文件名，文件名构成:当前时间 + 10位随机数 + .type
 	 * @autor:chenssy
-	 * @data:2014年8月11日
+	 * @date:2014年8月11日
 	 *
 	 * @param type
 	 * 				文件类型
@@ -71,7 +70,7 @@ public class FileUtils {
 	/**
 	 * 获取文件名，文件构成：当前时间 + 10位随机数
 	 * @autor:chenssy
-	 * @data:2014年8月11日
+	 * @date:2014年8月11日
 	 *
 	 * @return
 	 */
@@ -90,8 +89,8 @@ public class FileUtils {
 	 * @return
 	 * @throws Exception
 	 *
-	 * @author:陈明
-	 * @data : 2016年4月30日 下午9:10:12
+	 * @author:chenssy
+	 * @date : 2016年4月30日 下午9:10:12
 	 */
 	@SuppressWarnings("resource")
 	public static long getFileSize(File file) throws Exception {

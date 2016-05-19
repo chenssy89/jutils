@@ -6,11 +6,8 @@ import java.security.NoSuchAlgorithmException;
 /**
  * MD5加密
  * 
- * @Project:jutils
- * @file:MD5Utils.java
- * 
  * @Author:chenssy
- * @data:2016年4月9日
+ * @date:2016年4月9日
  */
 public class MD5Utils {
 	public static String stringMD5(String value) {

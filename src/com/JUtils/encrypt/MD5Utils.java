@@ -9,11 +9,15 @@ import java.security.NoSuchAlgorithmException;
  * @Author:chenssy
  * @date:2016年4月9日
  */
-public class MD5Utils {
-	public static String stringMD5(String value) {
+class MD5Utils {
+	protected final static String MD5_KEY = "MD5";
+	
+	protected final static String SHA_KEY = "SHA1";
+	
+	protected static String encrypt(String value,String key) {
 		try {
 			// 拿到一个MD5转换器（如果想要SHA1参数换成”SHA1”）
-			MessageDigest messageDigest = MessageDigest.getInstance("MD5");
+			MessageDigest messageDigest = MessageDigest.getInstance(key);
 			// 输入的字符串转换成字节数组
 			byte[] inputByteArray = value.getBytes();
 			// inputByteArray是输入字符串转换得到的字节数组
@@ -27,7 +31,7 @@ public class MD5Utils {
 		}
 	}
 
-	public static String byteArrayToHex(byte[] byteArray) {
+	private static String byteArrayToHex(byte[] byteArray) {
 
 		// 首先初始化一个字符数组，用来存放每个16进制字符
 		char[] hexDigits = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
@@ -42,9 +46,5 @@ public class MD5Utils {
 		}
 		// 字符数组组合成字符串返回
 		return new String(resultCharArray);
-	}
-	
-	public static void main(String[] args) {
-		System.out.println(stringMD5(stringMD5(stringMD5("123456"))));
 	}
 }

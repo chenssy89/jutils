@@ -20,7 +20,11 @@
 
 <h3></h3>
 <h3>package:encrypt--加解密</h3>
-<p>MD5Utils:md5加密处理工具类</p>
+<p>EncryptAndDecryptUtils：加解密工具类唯一入口</p>
+<p>AESUtils:AES加解密工具类</p>
+<p>Base64Utils:base64加解密工具类</p>
+<p>DESUtils：des加解密工具类</p>
+<p>MD5Utils：md5、SHA加解密工具类（根据转换器参数不同，现在不同的加密方式）</p>
 
 <h3></h3>
 <h3>package:excel--excel</h3>

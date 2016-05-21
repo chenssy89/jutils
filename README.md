@@ -15,7 +15,6 @@
 <p>StringUtils:字符串工具类，对字符串进行常规的处理</p>
 <p>ValidateHelper: 判断对象、字符串、集合是否为空、不为空</p>
 
-<h3></h3>
 <h3>package:clone--克隆</h3>
 <p>CloneUtils:克隆工具类，进行深克隆,包括对象、集合</p>
 

@@ -2,7 +2,7 @@ package com.JUtils.encrypt;
 
 /**
  * 加解密工具类<br>
- * 工具类包括：MD5加密、SHA加密、Base64加解密、DES加解密、AEC加解密、RAS加解密<br>
+ * 工具类包括：MD5加密、SHA加密、Base64加解密、DES加解密、AES加解密<br>
  *
  * @Author:chenssy
  * @date:2016年5月20日 下午4:44:51
@@ -180,7 +180,7 @@ public class EncryptAndDecryptUtils {
 	 * 				秘钥
 	 * @return
 	 */
-	public static String aseDecrypt(String value , String key){
+	public static String aesDecrypt(String value , String key){
 		key = key == null ? AESUtils.KEY : key;
 		String result = null;
 		try {

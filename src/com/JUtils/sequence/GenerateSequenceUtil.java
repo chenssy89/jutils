@@ -1,4 +1,4 @@
-package com.JUtils.base;
+package com.JUtils.sequence;
 
 import java.text.DecimalFormat;
 import java.text.FieldPosition;

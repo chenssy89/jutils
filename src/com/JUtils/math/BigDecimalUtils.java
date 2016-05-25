@@ -1,6 +1,8 @@
-package com.JUtils.base;
+package com.JUtils.math;
 
 import java.math.BigDecimal;
+
+import com.JUtils.base.ValidateHelper;
 
 /**
  * 提供精确的加减乘除运算

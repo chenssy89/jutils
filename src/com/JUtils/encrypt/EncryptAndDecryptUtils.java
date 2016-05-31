@@ -147,7 +147,7 @@ public class EncryptAndDecryptUtils {
 	 * AES加密
 	 *
 	 * @author:chenssy
-	 * @data : 2016年5月21日 上午9:58:58
+	 * @date : 2016年5月21日 上午9:58:58
 	 *
 	 * @param value
 	 * 					待加密内容
@@ -173,7 +173,7 @@ public class EncryptAndDecryptUtils {
 	 * AES解密
 	 * 
 	 * @author:chenssy
-	 * @data : 2016年5月21日 上午10:02:07
+	 * @date : 2016年5月21日 上午10:02:07
 	 *
 	 * @param value
 	 * 				待解密内容

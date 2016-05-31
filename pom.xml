@@ -35,5 +35,12 @@
 		  <artifactId>ant</artifactId>
 		  <version>1.9.1</version>
 		</dependency>
-	</dependencies>
+
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+
+    </dependencies>
 </project>

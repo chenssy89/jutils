@@ -13,7 +13,7 @@ import java.util.zip.ZipOutputStream;
  * 文件压缩、解压工具类。文件压缩格式为zip
  *
  * @Author:chenssy
- * @data:2016年5月24日 下午9:16:01
+ * @date:2016年5月24日 下午9:16:01
  */
 public class ZipUitls {
 	/** 文件后缀名 */
@@ -23,7 +23,7 @@ public class ZipUitls {
 	 * 压缩文件
 	 *
 	 * @author:chenssy
-	 * @data : 2016年5月24日 下午9:56:36
+	 * @date : 2016年5月24日 下午9:56:36
 	 *
 	 * @param resourcePath
 	 * 						源文件
@@ -61,10 +61,9 @@ public class ZipUitls {
 	}
 
 	/**
-	 * 
 	 *
 	 * @author:chenssy
-	 * @data : 2016年5月24日 下午10:00:22
+	 * @date : 2016年5月24日 下午10:00:22
 	 *
 	 * @param out
 	 * @param resourcesFile

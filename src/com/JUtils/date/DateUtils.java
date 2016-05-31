@@ -1,14 +1,10 @@
 package com.JUtils.date;
 
-import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
-import com.JUtils.base.ValidateHelper;
 
 /**
  * @desc:时间处理工具类
@@ -17,41 +13,7 @@ import com.JUtils.base.ValidateHelper;
  * @date:2014年8月4日
  */
 public class DateUtils {
-	/** yyyy:年 */
-	public static final String DATE_YEAR = "yyyy";
-	
-	/** MM：月 */
-	public static final String DATE_MONTH = "MM";
-	
-	/** DD：日 */
-	public static final String DATE_DAY = "dd";
-	
-	/** HH：时 */
-	public static final String DATE_HOUR = "HH";
-	
-	/** mm：分 */
-	public static final String DATE_MINUTE = "mm";
-	
-	/** ss：秒 */
-	public static final String DATE_SECONDES = "ss";
-	
-	/** yyyy-MM-dd */
-	public static final String DATE_FORMAT1 = "yyyy-MM-dd";
-		
-	/** yyyy-MM-dd hh:mm:ss */
-	public static final String DATE_FORMAT2 = "yyyy-MM-dd HH:mm:ss";
-
-	/** yyyy-MM-dd hh:mm:ss|SSS */
-	public static final String TIME_FORMAT_SSS = "yyyy-MM-dd HH:mm:ss|SSS";
-	
-	/** yyyyMMdd */
-	public static final String DATE_NOFUll_FORMAT = "yyyyMMdd";
-	
-	/** yyyyMMddhhmmss */
-	public static final String TIME_NOFUll_FORMAT = "yyyyMMddHHmmss";
-	
-	public static final String[] weeks = {"星期日","星期一","星期二","星期三","星期四","星期五","星期六"};
-	
+	private static final String[] weeks = {"星期日","星期一","星期二","星期三","星期四","星期五","星期六"};
 	/**
 	 * 根据指定格式获取当前时间
 	 * @author chenssy
@@ -60,7 +22,7 @@ public class DateUtils {
 	 * @return String
 	 */
 	public static String getCurrentTime(String format){
-		SimpleDateFormat sdf = getFormat(format);
+		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
 		Date date = new Date();
 		return sdf.format(date);
 	}
@@ -72,7 +34,7 @@ public class DateUtils {
 	 * @return String
 	 */
 	public static String getCurrentTime(){
-		return getCurrentTime(DateUtils.DATE_FORMAT2);
+		return getCurrentTime(DateFormatUtils.DATE_FORMAT2);
 	}
 	
 	/**
@@ -83,7 +45,7 @@ public class DateUtils {
 	 * @return Date
 	 */
 	public static Date getCurrentDate(String format){
-		 SimpleDateFormat sdf = getFormat(format);
+		 SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
 		 String dateS = getCurrentTime(format);
 		 Date date = null;
 		 try {
@@ -101,7 +63,7 @@ public class DateUtils {
 	 * @return Date
 	 */
 	public static Date getCurrentDate(){
-		return getCurrentDate(DateUtils.DATE_FORMAT2);
+		return getCurrentDate(DateFormatUtils.DATE_FORMAT2);
 	}
 	
 	/**
@@ -115,7 +77,7 @@ public class DateUtils {
 	 */
 	public static String addYearToDate(int year,Date date,String format){
 		Calendar calender = getCalendar(date,format);
-		SimpleDateFormat sdf = getFormat(format);
+		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
 		
 		calender.add(Calendar.YEAR, year);
 		
@@ -151,7 +113,7 @@ public class DateUtils {
 	 */
 	public static String addMothToDate(int month,Date date,String format) {
 		Calendar calender = getCalendar(date,format);
-		SimpleDateFormat sdf = getFormat(format);
+		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
 		
 		calender.add(Calendar.MONTH, month);
 		
@@ -187,7 +149,7 @@ public class DateUtils {
 	 */
 	public static String addDayToDate(int day,Date date,String format) {
 		Calendar calendar = getCalendar(date, format);
-		SimpleDateFormat sdf = getFormat(format);
+		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
 		
 		calendar.add(Calendar.DATE, day);
 		
@@ -223,7 +185,7 @@ public class DateUtils {
 	 */
 	public static String addHourToDate(int hour,Date date,String format) {
 		Calendar calendar = getCalendar(date, format);
-		SimpleDateFormat sdf = getFormat(format);
+		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
 		
 		calendar.add(Calendar.HOUR, hour);
 		
@@ -259,7 +221,7 @@ public class DateUtils {
 	 */
 	public static String addMinuteToDate(int minute,Date date,String format) {
 		Calendar calendar = getCalendar(date, format);
-		SimpleDateFormat sdf = getFormat(format);
+		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
 		
 		calendar.add(Calendar.MINUTE, minute);
 		
@@ -295,7 +257,7 @@ public class DateUtils {
 	 */
 	public static String addSecondToDate(int second,Date date,String format){
 		Calendar calendar = getCalendar(date, format);
-		SimpleDateFormat sdf = getFormat(format);
+		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
 		
 		calendar.add(Calendar.SECOND, second);
 		
@@ -341,18 +303,29 @@ public class DateUtils {
 	}
 	
 	/**
-	 * 获取日期显示格式，为空默认为yyyy-mm-dd HH:mm:ss
-	 * @author chenssy
-	 * @date Dec 30, 2013
-	 * @param format
+	 * 字符串转换为日期，日期格式为
+	 * 
+	 * @author : chenssy
+	 * @date : 2016年5月31日 下午5:20:22
+	 *
+	 * @param value
 	 * @return
-	 * @return SimpleDateFormat
 	 */
-	private static SimpleDateFormat getFormat(String format){
-		if(format == null || "".equals(format)){
-			format = DateUtils.DATE_FORMAT2;
+	public static Date string2Date(String value){
+		if(value == null || "".equals(value)){
+			return null;
 		}
-		return new SimpleDateFormat(format);
+		
+		SimpleDateFormat sdf = DateFormatUtils.getFormat(DateFormatUtils.DATE_FORMAT2);
+		Date date = null;
+		
+		try {
+			value = DateFormatUtils.formatDate(value, DateFormatUtils.DATE_FORMAT2);
+			date = sdf.parse(value);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return date;
 	}
 	
 	/**
@@ -368,11 +341,11 @@ public class DateUtils {
 			return null;
 		}
 		
-		SimpleDateFormat sdf = getFormat(format);
+		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
 		Date date = null;
 		
 		try {
-			value = formatDate(value, format);
+			value = DateFormatUtils.formatDate(value, format);
 			date = sdf.parse(value);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -384,6 +357,7 @@ public class DateUtils {
 	 * 将日期格式转换成String
 	 * @author chenssy
 	 * @date Dec 31, 2013
+	 * 
 	 * @param value 需要转换的日期
 	 * @param format 日期格式
 	 * @return String
@@ -393,85 +367,27 @@ public class DateUtils {
 			return null;
 		}
 		
-		SimpleDateFormat sdf = getFormat(format);
+		SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
 		return sdf.format(value);
 	}
 	
 	/**
-	 * @desc:格式化时间
-	 * @autor:chenssy
-	 * @date:2014年8月6日
-	 *
-	 * @param value 时间
-	 * @param format 指定格式
-	 * @return
-	 */
-	public static String formatDate(String date,String format) {
-		if(ValidateHelper.isEmpty(date) || ValidateHelper.isEmpty(format)){
-			return "";
-		}
-		Date dt = null;
-		SimpleDateFormat inFmt = null;
-		SimpleDateFormat outFmt = null;
-		ParsePosition pos = new ParsePosition(0);
-		date = date.replace("-", "").replace(":", "");
-		if ((date == null) || ("".equals(date.trim())))
-			return "";
-		try {
-			if (Long.parseLong(date) == 0L)
-				return "";
-		} catch (Exception nume) {
-			return date;
-		}
-		try {
-			switch (date.trim().length()) {
-			case 14:
-				inFmt = new SimpleDateFormat("yyyyMMddHHmmss");
-				break;
-			case 12:
-				inFmt = new SimpleDateFormat("yyyyMMddHHmm");
-				break;
-			case 10:
-				inFmt = new SimpleDateFormat("yyyyMMddHH");
-				break;
-			case 8:
-				inFmt = new SimpleDateFormat("yyyyMMdd");
-				break;
-			case 6:
-				inFmt = new SimpleDateFormat("yyyyMM");
-				break;
-			case 7:
-			case 9:
-			case 11:
-			case 13:
-			default:
-				return date;
-			}
-			if ((dt = inFmt.parse(date, pos)) == null)
-				return date;
-			if ((format == null) || ("".equals(format.trim()))) {
-				outFmt = new SimpleDateFormat("yyyy年MM月dd日");
-			} else {
-				outFmt = new SimpleDateFormat(format);
-			}
-			return outFmt.format(dt);
-		} catch (Exception ex) {
-		}
-		return date;
-	}
-	
-	/**
-	 * @desc:格式化是时间，采用默认格式（yyyy-MM-dd HH:mm:ss）
-	 * @autor:chenssy
-	 * @date:2014年8月6日
+	 * 日期转换为字符串
+	 * 
+	 * @author : chenssy
+	 * @date : 2016年5月31日 下午5:21:38
 	 *
 	 * @param value
 	 * @return
 	 */
-	public static String formatDate(String value){
-		return getFormat(DateUtils.DATE_FORMAT2).format(string2Date(value, DateUtils.DATE_FORMAT2));
+	public static String date2String(Date value){
+		if(value == null){
+			return null;
+		}
+		
+		SimpleDateFormat sdf = DateFormatUtils.getFormat(DateFormatUtils.DATE_FORMAT2);
+		return sdf.format(value);
 	}
-	
 	
 	/**
 	 * 获取指定日期的年份
@@ -481,7 +397,7 @@ public class DateUtils {
 	 * @return int
 	 */
 	public static int getCurrentYear(Date value){
-		String date = date2String(value, DateUtils.DATE_YEAR);
+		String date = date2String(value, DateFormatUtils.DATE_YEAR);
 		return Integer.valueOf(date);
 	}
 	
@@ -493,8 +409,8 @@ public class DateUtils {
 	 * @return int
 	 */
 	public static int getCurrentYear(String value) {
-		Date date = string2Date(value, DateUtils.DATE_YEAR);
-		Calendar calendar = getCalendar(date, DateUtils.DATE_YEAR);
+		Date date = string2Date(value, DateFormatUtils.DATE_YEAR);
+		Calendar calendar = getCalendar(date, DateFormatUtils.DATE_YEAR);
 		return calendar.get(Calendar.YEAR);
 	}
 	
@@ -506,7 +422,7 @@ public class DateUtils {
 	 * @return int
 	 */
 	public static int getCurrentMonth(Date value){
-		String date = date2String(value, DateUtils.DATE_MONTH);
+		String date = date2String(value, DateFormatUtils.DATE_MONTH);
 		return Integer.valueOf(date);
 	}
 	
@@ -518,8 +434,8 @@ public class DateUtils {
 	 * @return int
 	 */
 	public static int getCurrentMonth(String value) {
-		Date date = string2Date(value, DateUtils.DATE_MONTH);
-		Calendar calendar = getCalendar(date, DateUtils.DATE_MONTH);
+		Date date = string2Date(value, DateFormatUtils.DATE_MONTH);
+		Calendar calendar = getCalendar(date, DateFormatUtils.DATE_MONTH);
 		
 		return calendar.get(Calendar.MONTH);
 	}
@@ -532,7 +448,7 @@ public class DateUtils {
 	 * @return int
 	 */
 	public static int getCurrentDay(Date value){
-		String date = date2String(value, DateUtils.DATE_DAY);
+		String date = date2String(value, DateFormatUtils.DATE_DAY);
 		return Integer.valueOf(date);
 	}
 	
@@ -544,8 +460,8 @@ public class DateUtils {
 	 * @return int
 	 */
 	public static int getCurrentDay(String value){
-		Date date = string2Date(value, DateUtils.DATE_DAY);
-		Calendar calendar = getCalendar(date, DateUtils.DATE_DAY);
+		Date date = string2Date(value, DateFormatUtils.DATE_DAY);
+		Calendar calendar = getCalendar(date, DateFormatUtils.DATE_DAY);
 		
 		return calendar.get(Calendar.DATE);
 	}
@@ -558,7 +474,7 @@ public class DateUtils {
 	 * @return String
 	 */
 	public static String getCurrentWeek(Date value) {
-		Calendar calendar = getCalendar(value, DateUtils.DATE_FORMAT1);
+		Calendar calendar = getCalendar(value, DateFormatUtils.DATE_FORMAT1);
 		int weekIndex = calendar.get(Calendar.DAY_OF_WEEK) - 1 < 0 ? 0 : calendar.get(Calendar.DAY_OF_WEEK) - 1;
 		
 		return weeks[weekIndex];
@@ -572,7 +488,7 @@ public class DateUtils {
 	 * @return String
 	 */
 	public static String getCurrentWeek(String value) {
-		Date date = string2Date(value, DateUtils.DATE_FORMAT1);
+		Date date = string2Date(value, DateFormatUtils.DATE_FORMAT1);
 		return getCurrentWeek(date);
 	}
 	
@@ -584,7 +500,7 @@ public class DateUtils {
 	 * @return int
 	 */
 	public static int getCurrentHour(Date value){
-		String date = date2String(value, DateUtils.DATE_HOUR);
+		String date = date2String(value, DateFormatUtils.DATE_HOUR);
 		return Integer.valueOf(date);
 	}
 	
@@ -597,8 +513,8 @@ public class DateUtils {
 	 * @return int
 	 */
 	public static int getCurrentHour(String value) {
-		Date date = string2Date(value, DateUtils.DATE_HOUR);
-		Calendar calendar = getCalendar(date, DateUtils.DATE_HOUR);
+		Date date = string2Date(value, DateFormatUtils.DATE_HOUR);
+		Calendar calendar = getCalendar(date, DateFormatUtils.DATE_HOUR);
 		
 		return calendar.get(Calendar.DATE);
 	}
@@ -611,7 +527,7 @@ public class DateUtils {
 	 * @return int
 	 */
 	public static int getCurrentMinute(Date value){
-		String date = date2String(value, DateUtils.DATE_MINUTE);
+		String date = date2String(value, DateFormatUtils.DATE_MINUTE);
 		return Integer.valueOf(date);
 	}
 	
@@ -623,8 +539,8 @@ public class DateUtils {
 	 * @return int
 	 */
 	public static int getCurrentMinute(String value){
-		Date date = string2Date(value, DateUtils.DATE_MINUTE);
-		Calendar calendar = getCalendar(date, DateUtils.DATE_MINUTE);
+		Date date = string2Date(value, DateFormatUtils.DATE_MINUTE);
+		Calendar calendar = getCalendar(date, DateFormatUtils.DATE_MINUTE);
 		
 		return calendar.get(Calendar.MINUTE);
 	}
@@ -645,8 +561,8 @@ public class DateUtils {
      */    
     public static int compareDate(String startDay,String endDay,int stype) {     
         int n = 0;     
-        startDay = formatDate(startDay, "yyyy-MM-dd");
-        endDay = formatDate(endDay, "yyyy-MM-dd");
+        startDay = DateFormatUtils.formatDate(startDay, "yyyy-MM-dd");
+        endDay = DateFormatUtils.formatDate(endDay, "yyyy-MM-dd");
         
         String formatStyle = "yyyy-MM-dd";
         if(1 == stype){
@@ -697,7 +613,7 @@ public class DateUtils {
     		endTime = getCurrentTime();
     	}
     	
-    	SimpleDateFormat sdf = getFormat("");
+    	SimpleDateFormat sdf = DateFormatUtils.getFormat("");
     	int value = 0;
     	try {
 			Date begin = sdf.parse(startTime);
@@ -732,7 +648,7 @@ public class DateUtils {
      * @return 比较结果
      */
     public static int compare(String date1, String date2,String format) {
-        DateFormat df = getFormat(format);
+        DateFormat df = DateFormatUtils.getFormat(format);
         try {
             Date dt1 = df.parse(date1);
             Date dt2 = df.parse(date2);
@@ -750,36 +666,34 @@ public class DateUtils {
     }
     
     /**
-     * 将String 转换为 timestamp<br>
-     * 注：value必须形如： yyyy-mm-dd hh:mm:ss[.f...] 这样的格式，中括号表示可选，否则报错！！！ 
-     * @autor:chenssy
-     * @date:2014年9月22日
+     * 获取指定月份的第一天 
+     * 
+     * @author : chenssy
+     * @date : 2016年5月31日 下午5:31:10
      *
-     * @param value
-     * @param format
+     * @param date
      * @return
      */
-    public static Timestamp string2Timestamp(String value){
-    	Timestamp ts = new Timestamp(System.currentTimeMillis());  
-    	ts = Timestamp.valueOf(value);
-    	return ts;
+    public static String getMonthFirstDay(String date){
+    	date = DateFormatUtils.formatDate(date);
+		return DateFormatUtils.formatDate(date, "yyyy-MM") + "-01";
     }
     
     /**
-     * 将timeStamp 转换为String类型，format为null则使用默认格式 yyyy-MM-dd HH:mm:ss
-     * @autor:chenssy
-     * @date:2014年9月22日
+     * 获取指定月份的最后一天
+     * 
+     * @author : chenssy
+     * @date : 2016年5月31日 下午5:32:09
      *
-     * @param value
-     * @param format
+     * @param strdate
      * @return
      */
-    public static String timeStamp2String(Timestamp value,String format){
-    	if(null == value){
-    		return "";
-    	}
-    	SimpleDateFormat sdf = getFormat(format);
-    	
-    	return sdf.format(value);
-    }
+	public static String getMonthEnd(String date) {
+		Date strDate =DateUtils.string2Date(getMonthFirstDay(date));
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(strDate);
+		calendar.add(Calendar.MONTH, 1);
+		calendar.add(Calendar.DAY_OF_YEAR, -1);
+		return DateFormatUtils.formatDate(calendar.getTime());
+	}
 }

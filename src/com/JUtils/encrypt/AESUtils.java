@@ -11,7 +11,7 @@ import javax.crypto.spec.SecretKeySpec;
  * AES加解密
  *
  * @Author:chenssy
- * @data:2016年5月21日 上午9:01:41
+ * @date:2016年5月21日 上午9:01:41
  */
 class AESUtils {
 	/** 默认秘钥 */
@@ -21,7 +21,7 @@ class AESUtils {
      *  AES解密
      *
      * @author:chenssy
-     * @data : 2016年5月21日 上午9:48:12
+     * @date : 2016年5月21日 上午9:48:12
      *
      * @param encryptValue
      * 						待解密内容
@@ -38,7 +38,7 @@ class AESUtils {
      * AES加密 
      *
      * @author:chenssy
-     * @data : 2016年5月21日 上午9:48:42
+     * @date : 2016年5月21日 上午9:48:42
      *
      * @param value
      * 					待加密内容

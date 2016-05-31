@@ -20,6 +20,7 @@ import org.apache.poi.ss.util.NumberToTextConverter;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.JUtils.date.DateUtils;
+import com.JUtils.date.DateFormatUtils;
 
 /**
  * 解析Excel，支持2003、2007
@@ -210,7 +211,7 @@ public class ExcelReadHelper {
 			}
 		} else if ("java.sql.Timestamp".equals(type)) {
 			if (value.length() > 0)
-				oo[0] = DateUtils.formatDate(value, "yyyyMMddHH24mmss");
+				oo[0] = DateFormatUtils.formatDate(value, "yyyyMMddHH24mmss");
 		} else if ("java.lang.Boolean".equals(type)  || "Boolean".equals(type)) {
 			if (value.length() > 0)
 				oo[0] = Boolean.valueOf(value);

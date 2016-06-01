@@ -1,5 +1,6 @@
 package com.JUtils.base;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -9,6 +10,23 @@ import java.util.regex.Pattern;
  * @date:2014年8月7日
  */
 public class RegexUtils {
+	
+	/**
+	 * 判断字符串是否符合正则表达式
+	 * 
+	 * @author : chenssy
+	 * @date : 2016年6月1日 下午12:43:05
+	 *
+	 * @param str
+	 * @param regex
+	 * @return
+	 */
+	public static boolean find(String str, String regex) {
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(str);
+		boolean b = m.find();
+		return b;
+	}
 	
 	/**
 	 * 判断输入的字符串是否符合Email格式.

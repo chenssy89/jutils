@@ -674,7 +674,7 @@ public class DateUtils {
      * @param date
      * @return
      */
-    public static String getMonthFirstDay(String date){
+    public static String getMonthFirstDate(String date){
     	date = DateFormatUtils.formatDate(date);
 		return DateFormatUtils.formatDate(date, "yyyy-MM") + "-01";
     }
@@ -688,12 +688,51 @@ public class DateUtils {
      * @param strdate
      * @return
      */
-	public static String getMonthEnd(String date) {
-		Date strDate =DateUtils.string2Date(getMonthFirstDay(date));
+	public static String getMonthLastDate(String date) {
+		Date strDate = DateUtils.string2Date(getMonthFirstDate(date));
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(strDate);
 		calendar.add(Calendar.MONTH, 1);
 		calendar.add(Calendar.DAY_OF_YEAR, -1);
 		return DateFormatUtils.formatDate(calendar.getTime());
+	}
+	
+	/**
+	 * 获取所在星期的第一天
+	 * 
+	 * @author : chenssy
+	 * @date : 2016年6月1日 下午12:38:53
+	 *
+	 * @param date
+	 * @return
+	 */
+	@SuppressWarnings("static-access")
+	public static Date getWeekFirstDate(Date date) {
+		Calendar now = Calendar.getInstance();
+		now.setTime(date);
+		int today = now.get(Calendar.DAY_OF_WEEK);
+		int first_day_of_week = now.get(Calendar.DATE) + 2 - today; // 星期一
+		now.set(now.DATE, first_day_of_week);
+		return now.getTime();
+	}
+	
+	/**
+	 * 获取所在星期的最后一天
+	 * 
+	 * @author : chenssy
+	 * @date : 2016年6月1日 下午12:40:31
+	 *
+	 * @param date
+	 * @return
+	 */
+	@SuppressWarnings("static-access")
+	public static Date geWeektLastDate(Date date) {
+		Calendar now = Calendar.getInstance();
+		now.setTime(date);
+		int today = now.get(Calendar.DAY_OF_WEEK);
+		int first_day_of_week = now.get(Calendar.DATE) + 2 - today; // 星期一
+		int last_day_of_week = first_day_of_week + 6; // 星期日
+		now.set(now.DATE, last_day_of_week);
+		return now.getTime();
 	}
 }

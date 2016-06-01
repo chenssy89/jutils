@@ -196,7 +196,7 @@ public class BigDecimalUtils {
 	 * @param value
 	 * @return
 	 */
-	public static Long setBigDecimalToLong(BigDecimal value){
+	public static Long bigDecimalToLong(BigDecimal value){
 		if(value != null){
 			return new Long(value.longValue());
 		}
@@ -211,7 +211,7 @@ public class BigDecimalUtils {
 	 * @param value
 	 * @return
 	 */
-	public static Integer setBigDecimalToInteger(BigDecimal value){
+	public static Integer bigDecimalToInteger(BigDecimal value){
 		if(value != null){
 			return new Integer(value.intValue());
 		}

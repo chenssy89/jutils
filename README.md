@@ -7,17 +7,22 @@
 
 <h2>主要功能</h2>
 <h3>package:base--基本功能</h3>
-<p>BigDecimalUtils：提供精确的加减乘除运算</p>
-<p>DateUtils：时间处理工具类</p>
+<p>ConverUtils：转换工具类，主要应用于各种类型之间的转换</p>
+<p>IdCardValidator:身份证校验工具类，提供较为精确的身份证校验</p>
 <p>MoneyUtils:金钱处理工具类</p>
-<p>RandomUtils:随机数工具类</p>
 <p>RegexUtils:正则表达式工具类，验证数据是否符合规范</p>
 <p>StringUtils:字符串工具类，对字符串进行常规的处理</p>
 <p>ValidateHelper: 判断对象、字符串、集合是否为空、不为空</p>
-<p>ConvertUtils:格式转换工具类</p>
 
+<h3></h3>
 <h3>package:clone--克隆</h3>
 <p>CloneUtils:克隆工具类，进行深克隆,包括对象、集合</p>
+
+<h3></h3>
+<h3>date：时间类</h3>
+<p>DateFromatUtils：格式转换工具类</p>
+<p>DateUtils:日期、时间工具类</p>
+<p>TimestampUtils：timeStamp工具类</p>
 
 <h3></h3>
 <h3>package:encrypt--加解密</h3>
@@ -39,12 +44,19 @@
 <h3>package:ImageUtil--图像处理</h3>
 <p>ImageUtil:图像处理。对图片进行压缩、水印、伸缩变换、透明处理、格式转换操作</p>
 
-<h3>package:ImageUtil--图像处理</h3>
-<p>ImageUtil:图像处理。对图片进行压缩、水印、伸缩变换、透明处理、格式转换操作</p>
+<h3>math：数字类</h3>
+<p>BigDecimalUtils：BigDecimal工具类</p>
+<p>RandomUtils:随机数工具类</p>
 
-<h3>package:jsp--JSP</h3>
-<p>JSPBeanUtils:在jsp页面中使用，JavaBean</p>
+<h3>QRCode：二维码类</h3>
+<p>MatrixToImageCofig：二维码配置</p>
+<p>MatrixToImageWriter:二维码工具类</p>
+
+<h3>sequence：序列</h3>
+<p>GenerateSequenceUtils：生成唯一的序列</p>
 
 <h3>package:sensitiveword--J敏感词</h3>
 <p>SensitivewordFilterUtil:铭感词过滤工具类</p>
 <p>SensitiveWordInit:初始化敏感词库，将敏感词加入到HashMap中，构建DFA算法模型</p>
+
+<h3>word：word类</h3>

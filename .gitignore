@@ -1,6 +1,2 @@
-/bin/
-/target/
-.settings
-.classpath
-.project
 .idea/
+jutils.iml

@@ -78,7 +78,7 @@ class Base64Utils {
 	 *
 	 * @param str
 	 * @return
-	 * @throws UnsupportedEncodingException 
+	 * @throws java.io.UnsupportedEncodingException
 	 */
 	protected static byte[] decrypt(String str) throws Exception{
 		StringBuffer sb = new StringBuffer();

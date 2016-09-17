@@ -1,3 +1,4 @@
-.idea/
-jutils.iml
 target/
+*.iml
+**/*.iml
+**/target

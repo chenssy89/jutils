@@ -2,48 +2,88 @@ package com.JUtils.date;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
- * Timestamp工具类
+ * TimeStamp工具类，提供TimeStamp与String、Date的转换
  *
- * @Author:chenssy
- * @date:2016年5月31日 下午5:25:18
- *
+ * @author chenssy
+ * @date 2016-09-24
+ * @since 1.0.0
  */
 public class TimestampUtils {
-	/**
-     * 将String 转换为 timestamp<br>
-     * 注：value必须形如： yyyy-mm-dd hh:mm:ss[.f...] 这样的格式，中括号表示可选，否则报错！！！ 
-     * 
-     * @Author:chenssy
-     * @date:2016年5月31日 下午5:25:18
-     *
+
+    /**
+     * String转换为TimeStamp
      * @param value
-     * @param format
-     * @return
+     *              待转换的String，格式必须为 yyyy-mm-dd hh:mm:ss[.f...] 这样的格式，中括号表示可选，否则报错
+     * @return java.sql.Timestamp
+     *
+     * @author chenssy
+     * @date 2016-09-24
+     * @since v1.0.0
      */
     public static Timestamp string2Timestamp(String value){
-    	Timestamp ts = new Timestamp(System.currentTimeMillis());  
+        if(value == null && !"".equals(value.trim())){
+            return null;
+        }
+    	Timestamp ts = new Timestamp(System.currentTimeMillis());
     	ts = Timestamp.valueOf(value);
     	return ts;
     }
-    
+
     /**
-     * 将timeStamp 转换为String类型，format为null则使用默认格式 yyyy-MM-dd HH:mm:ss
-     * 
-     * @Author:chenssy
-     * @date:2016年5月31日 下午5:25:18
+     * 将Timestamp 转换为String类型，format为null则使用默认格式 yyyy-MM-dd HH:mm:ss
      *
      * @param value
+     *              待转换的Timestamp
      * @param format
-     * @return
+     *              String的格式
+     * @return java.lang.String
+     *
+     * @author chenssy
+     * @date 2016-09-24
+     * @since v1.0.0
      */
-    public static String timeStamp2String(Timestamp value,String format){
+    public static String timestamp2String(Timestamp value,String format){
     	if(null == value){
     		return "";
     	}
     	SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
     	
     	return sdf.format(value);
+    }
+
+    /**
+     * Date转换为Timestamp
+     *
+     * @param date
+     *              待转换的Date
+     * @return java.sql.Timestamp
+     *
+     * @author chenssy
+     * @date 2016-09-24
+     * @since v1.0.0
+     */
+    public static Timestamp date2Timestamp(Date date){
+        if(date == null){
+            return null;
+        }
+        return new Timestamp(date.getTime());
+    }
+
+    /**
+     * Timestamp转换为Date
+     *
+     * @param time
+     *              待转换的Timestamp
+     * @return java.util.Date
+     *
+     * @author chenssy
+     * @date 2016-09-24
+     * @since v1.0.0
+     */
+    public static Date timestamp2Date(Timestamp time){
+        return time == null ? null : time;
     }
 }

@@ -121,7 +121,7 @@ public class ExcelReadHelper {
 				continue;
 			}
 			
-			for(int numRow = 1 ; numRow < sheet.getLastRowNum() ; numRow++){   //一个row就相当于一个Object
+			for(int numRow = 1 ; numRow <= sheet.getLastRowNum() ; numRow++){   //一个row就相当于一个Object
 				Row row = sheet.getRow(numRow);
 				if(row == null){
 					continue;
